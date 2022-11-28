@@ -103,13 +103,43 @@ int main()
     arr.add(6);
     arr.add(7);
 
-    std::cout << "arr.size :  " << arr.size() << std::endl;
+    std::cout << "arr.size() :  " << arr.size() << std::endl;
     for(int i=0; i<arr.size(); ++i){
-        std::cout << arr[i] << std::endl;
+        std::cout << i << " element in arr: " << arr[i] << std::endl;
     }
+    
+    std::cout << std::endl;
 
     array<int> arr2;
     arr2 = arr;
 
-    std::cout << arr2.size() << std::endl;
+    std::cout << "arr2.size(): " << arr2.size() << std::endl;
+    for(int i=0; i<arr2.size(); ++i){
+        std::cout << i << " element in arr2: " << arr2[i] << std::endl;
+    }
+
+    std::cout << std::endl;
+
+    array<std::string> my_str_array1(3);
+    my_str_array1.add("Nothing1");
+    my_str_array1.add("Nothing2");
+    my_str_array1.add("Nothing3");
+
+    std::cout << "my_str_array1.size(): " << my_str_array1.size() << std::endl;
+
+     for(int i=0; i<arr.size(); ++i){
+        std::cout << i << " element in my_str_array1: " << my_str_array1[i] << std::endl;
+    }
+
+    std::cout << std::endl;
+
+    array<std::string> my_str_array2;
+    my_str_array2 = my_str_array1;
+
+    std::cout << "my_str_array2.size(): " << my_str_array2.size() << std::endl;
+
+     for(int i=0; i<arr.size(); ++i){
+        std::cout << i << " element in my_str_array2: " << my_str_array2[i] << std::endl;
+    }
+
 }
